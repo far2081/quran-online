@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Quran AI System</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins}
+body{
+background:#050f0c;
+color:white;
+overflow-x:hidden;
+}
+
+/* NAV */
+.nav{
+display:flex;justify-content:space-between;
+padding:20px 40px;
+position:fixed;width:100%;
+background:rgba(0,0,0,0.5);
+backdrop-filter:blur(12px);
+z-index:1000;
+}
+.nav h2{color:#00ffae}
+.nav a{color:white;text-decoration:none;margin:0 12px}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:radial-gradient(circle at center,#0f3d2e,#050f0c);
+}
+
+.hero h1{
+font-size:60px;
+background:linear-gradient(90deg,#00ffae,#00c3ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+margin-top:15px;
+opacity:0.8;
+}
+
+.hero button{
+margin-top:25px;
+padding:15px 35px;
+border:none;
+background:linear-gradient(45deg,#00ffae,#00c3ff);
+color:black;
+font-weight:bold;
+border-radius:10px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.hero button:hover{
+transform:scale(1.1);
+}
+
+/* SECTION */
+.section{
+padding:80px 30px;
+text-align:center;
+}
+
+/* CARDS */
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+margin-top:40px;
+}
+
+.card{
+width:260px;
+padding:25px;
+border-radius:18px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(15px);
+box-shadow:0 0 25px rgba(0,255,170,0.15);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-12px) scale(1.05);
+box-shadow:0 0 40px rgba(0,255,170,0.6);
+}
+
+/* CAMERA UI */
+.camera{
+height:250px;
+background:black;
+border-radius:15px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:18px;
+margin-top:25px;
+position:relative;
+}
+
+.camera::after{
+content:"LIVE";
+position:absolute;
+top:10px;
+left:10px;
+background:red;
+padding:4px 8px;
+font-size:12px;
+}
+
+/* BUTTON */
+.btn{
+margin-top:20px;
+padding:12px 25px;
+background:#00ffae;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+}
+
+/* LOCK */
+.lock{
+filter:blur(3px);
+position:relative;
+}
+.lock::after{
+content:"🔒 Premium AI";
+position:absolute;
+top:40%;
+left:20%;
+background:red;
+padding:6px;
+}
+
+/* FOOTER */
+.footer{
+padding:25px;
+text-align:center;
+background:#020805;
+margin-top:40px;
+}
+</style>
+
+<script>
+function fake(msg){
+alert(msg);
+}
+
+// disable right click
+document.addEventListener('contextmenu',e=>e.preventDefault());
+</script>
+
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="nav">
+<h2>Quran AI System</h2>
+<div>
+<a href="#">Features</a>
+<a href="#">AI</a>
+<a href="#">Dashboard</a>
+</div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+<img src="assets/ai_hero_1780575294193.png" alt="AI Hero Image" style="max-width: 350px; border-radius: 20px; box-shadow: 0 0 50px rgba(0,255,170,0.4); margin-bottom: 20px;">
+<h1>Future of Quran Learning</h1>
+<p>Live Classes • AI Automation • Full Admin Control</p>
+<button onclick="fake('Full system activates after development')">
+View Full System
+</button>
+</div>
+
+<!-- FEATURES -->
+<div class="section">
+<h2>🚀 Complete System Modules</h2>
+
+<div class="cards">
+<div class="card">🎥 Live Classes (Camera + Mic)</div>
+<div class="card">👩💼 Admin Dashboard</div>
+<div class="card">👨🎓 Student Panel</div>
+<div class="card">👩🏫 Teacher Panel</div>
+<div class="card">💳 Online Payments</div>
+<div class="card">📊 Reports & Analytics</div>
+</div>
+</div>
+
+<!-- AI -->
+<div class="section">
+<h2>🧠 AI Powered Features</h2>
+
+<div class="cards">
+<div class="card" style="text-align: center;">
+<img src="assets/ai_mcq_1780575318166.png" alt="MCQ Generator" style="width: 100px; margin-bottom: 15px; border-radius: 12px; box-shadow: 0 0 15px rgba(0,255,170,0.3);">
+<br>🤖 MCQ Generator
+</div>
+<div class="card" style="text-align: center;">
+<img src="assets/ai_homework_1780575330303.png" alt="Homework Auto Checking" style="width: 100px; margin-bottom: 15px; border-radius: 12px; box-shadow: 0 0 15px rgba(0,255,170,0.3);">
+<br>🧠 Homework Auto Checking
+</div>
+<div class="card" style="text-align: center;">
+<img src="assets/ai_voice_1780575341725.png" alt="Voice Recognition" style="width: 100px; margin-bottom: 15px; border-radius: 12px; box-shadow: 0 0 15px rgba(0,255,170,0.3);">
+<br>🎤 Voice Recognition (Tajweed)
+</div>
+<div class="card lock" style="text-align: center;">
+<img src="assets/ai_chart_1780575355572.png" alt="Smart AI Reports" style="width: 100px; margin-bottom: 15px; border-radius: 12px; box-shadow: 0 0 15px rgba(0,255,170,0.3);">
+<br>📈 Smart AI Reports
+</div>
+</div>
+</div>
+
+<!-- LIVE DEMO -->
+<div class="section">
+<h2>🎥 Live Class Experience</h2>
+
+<div class="camera" style="background: url('assets/ai_live_class_1780575306571.png') center/cover; box-shadow: 0 0 30px rgba(0,255,170,0.2); height: 400px;">
+</div>
+
+<button class="btn" onclick="fake('Joining system will activate later')">
+Join Class
+</button>
+</div>
+
+<!-- ADMIN -->
+<div class="section">
+<h2>👩💼 Admin Control Panel</h2>
+
+<div class="cards">
+<div class="card">Manage Students</div>
+<div class="card">Manage Teachers</div>
+<div class="card">Payments Control</div>
+<div class="card">AI System Control</div>
+</div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+Premium Demo • Designed by Farhana Aamir
+</div>
+
+</body>
+</html>
