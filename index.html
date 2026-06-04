@@ -15,11 +15,46 @@ color:white;
 overflow-x:hidden;
 }
 
+/* TOP BANNER */
+.top-banner{
+background:linear-gradient(90deg,#ffcc00,#ff6600);
+color:black;
+text-align:center;
+padding:10px;
+font-weight:bold;
+animation:slide 8s linear infinite;
+/* Preserved for layout: */
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 1001;
+}
+
+@keyframes slide{
+0%{letter-spacing:1px}
+50%{letter-spacing:3px}
+100%{letter-spacing:1px}
+}
+/* PROMO BANNER */
+.promo-banner{
+margin:30px auto;
+width:80%;
+padding:20px;
+background:linear-gradient(45deg,#00ffae,#00c3ff);
+color:black;
+font-weight:bold;
+border-radius:12px;
+text-align:center;
+box-shadow:0 0 20px rgba(0,255,170,0.5);
+}
+
+
 /* NAV */
 .nav{
 display:flex;justify-content:space-between;
 padding:20px 40px;
 position:fixed;width:100%;
+top: 40px;
 background:rgba(0,0,0,0.5);
 backdrop-filter:blur(12px);
 z-index:1000;
@@ -29,10 +64,12 @@ z-index:1000;
 
 /* HERO */
 .hero{
-height:100vh;
+min-height:100vh;
+padding-top:180px;
+padding-bottom:60px;
 display:flex;
 flex-direction:column;
-justify-content:center;
+justify-content:flex-start;
 align-items:center;
 text-align:center;
 background:radial-gradient(circle at center,#0f3d2e,#050f0c);
@@ -68,7 +105,8 @@ transform:scale(1.1);
 
 /* SECTION */
 .section{
-padding:80px 30px;
+padding:100px 30px;
+margin-bottom: 40px;
 text-align:center;
 }
 
@@ -151,6 +189,30 @@ text-align:center;
 background:#020805;
 margin-top:40px;
 }
+
+/* AD BOX */
+.ad-box{
+width:80%;
+margin:60px auto;
+padding:30px;
+border:2px dashed #00ffae;
+border-radius:12px;
+text-align:center;
+font-weight:bold;
+background:rgba(0,255,170,0.05);
+}
+
+/* SIDE AD */
+.side-ad{
+width:80%;
+margin:60px auto;
+padding:15px;
+background:linear-gradient(45deg,#ff0066,#ffcc00);
+color:black;
+border-radius:10px;
+font-weight:bold;
+text-align:center;
+}
 </style>
 
 <script>
@@ -165,6 +227,11 @@ document.addEventListener('contextmenu',e=>e.preventDefault());
 </head>
 
 <body>
+
+<!-- TOP BANNER -->
+<div class="top-banner">
+🔥 Special Offer: Get Free Trial Classes – Limited Time
+</div>
 
 <!-- NAV -->
 <div class="nav">
@@ -181,6 +248,9 @@ document.addEventListener('contextmenu',e=>e.preventDefault());
 <img src="assets/ai_hero_1780575294193.png" alt="AI Hero Image" style="max-width: 350px; border-radius: 20px; box-shadow: 0 0 50px rgba(0,255,170,0.4); margin-bottom: 20px;">
 <h1>Future of Quran Learning</h1>
 <p>Live Classes • AI Automation • Full Admin Control</p>
+<div class="promo-banner">
+📢 Ramadan Discount – 30% OFF on All Courses
+</div>
 <button onclick="fake('Full system activates after development')">
 View Full System
 </button>
@@ -248,9 +318,19 @@ Join Class
 </div>
 </div>
 
+<!-- AD BOX -->
+<div class="ad-box">
+🎯 Your Advertisement Banner Here (Google Ads / Sponsor)
+</div>
+
 <!-- FOOTER -->
 <div class="footer">
 Premium Demo • Designed by Farhana Aamir
+</div>
+
+<!-- SIDE AD -->
+<div class="side-ad">
+📢 Promote Your Course Here
 </div>
 
 </body>
